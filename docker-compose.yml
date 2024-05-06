@@ -32,14 +32,6 @@ services:
       - ./agents/agent-1/conf:/data/teamcity_agent/conf
     environment:
       - DOCKER_IN_DOCKER=start
-  teamcity-agent-2:
-    image: jetbrains/teamcity-agent:${TEAMCITY_VERSION}-linux-sudo
-    restart: always
-    privileged: true
-    volumes:
-      - ./agents/agent-2/conf:/data/teamcity_agent/conf
-    environment:
-      - DOCKER_IN_DOCKER=start
 
   gitlab:
     image: gitlab/gitlab-ee:latest
