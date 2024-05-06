@@ -68,5 +68,5 @@ services:
     image: gitlab/gitlab-runner
     restart: always
     volumes:
-      - ./gitlab-runners/runner-1/config:/etc/gitlab-runner
-      - ./gitlab-runners/runner-1/run/docker.sock:/var/run/docker.sock
+      - /srv/gitlab-runners/runner-1/config:/etc/gitlab-runner
+      - /var/run/docker.sock:/var/run/docker.sock
